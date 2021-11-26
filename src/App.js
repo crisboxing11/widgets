@@ -1,11 +1,7 @@
 import React from 'react'
 
-function APP() {
-    return (
-        <div>
-            
-        </div>
-    )
-}
 
-export default APP
+
+export default () => {
+    return <h1>Widgets App</h1>
+}
