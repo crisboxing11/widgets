@@ -16,7 +16,6 @@ content:'You use React by creating components'}
 export default () => {
     return (
         <div>
-            <Accordion items={items} />
             <Search />
             </div>
     )
