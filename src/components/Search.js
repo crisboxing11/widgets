@@ -3,6 +3,7 @@ import axios from 'axios'
 
 const Search = () =>  {
     const [term, setTerm] = useState('');
+    const [results, setResults] = useState('')
 
     useEffect(() => {
        const search = async() => {
@@ -16,7 +17,7 @@ const Search = () =>  {
             },
         });
            };
-           
+
            search()
        
     },[term]);
