@@ -22,11 +22,8 @@ onClick={() => onTitleClick(index)}
     <p>{item.content}</p>
 </div>
 </React.Fragment>
-
-
 )
 })
-
 
     return (
         <div className="ui styled accordion">

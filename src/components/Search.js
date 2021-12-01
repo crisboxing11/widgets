@@ -12,8 +12,7 @@ const Search = () =>  {
                 list: 'search',
                 origin: '*',
                 format: 'json',
-                srsearch: term
-                
+                srsearch: terms
             },
         });
            };
