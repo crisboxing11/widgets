@@ -4,8 +4,7 @@ import axios from 'axios'
 const Search = () =>  {
     const [term, setTerm] = useState('Programming');
     const [results, setResults] = useState([])
-console.log(results)
-
+    
     useEffect(() => {
        const search = async () => {
            const { data } = await axios.get("https://en.wikipedia.org/w/api.php", {
@@ -17,7 +16,7 @@ console.log(results)
                 srsearch: term,
             },
         });
-        setResults(data)
+        setResults(data.query.search)
            };
            
             search();
