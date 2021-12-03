@@ -4,7 +4,7 @@ import axios from 'axios'
 const Search = () =>  {
     const [term, setTerm] = useState('Programming');
     const [results, setResults] = useState([])
-    
+
     useEffect(() => {
        const search = async () => {
            const { data } = await axios.get("https://en.wikipedia.org/w/api.php", {
@@ -19,12 +19,10 @@ const Search = () =>  {
         setResults(data.query.search)
            };
            
-            search();
-           
-           
+            search();    
     },[term]);
     return (
-        <div>
+        <div> 
             <div className='ui form'>
                 <div className='field'>
                     <label>Enter Search Term</label>
