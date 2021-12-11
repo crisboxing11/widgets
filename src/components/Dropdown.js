@@ -1,11 +1,28 @@
 import React from 'react'
 
-const Dropdown = () => {
+const Dropdown = ({options}) => {
+const renderedOptions = options.map((options) => {
     return (
-        <div>
-            <h1>Dropdown</h1>
+        <div key={options.value} className="item">
+            {options.label}
         </div>
     )
+})
+
+    return (
+      <div className="ui form">
+        <div className="field">
+          <label className="label">Select a Color</label>
+          <div className="ui selection dropdown visible active">
+            <i className="dropdown icon"></i>
+            <div className="text">Select A Color</div>
+            <div className="menu visible transition">
+                {renderedOptions}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
 }
 
 export default Dropdown
