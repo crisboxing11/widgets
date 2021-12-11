@@ -16,13 +16,15 @@ const Search = () =>  {
                 srsearch: term,
             },
         });
-        setResults(data.query.search)
+        setResults(data.query.search);
            };
-           if (term) {
-            search();    
-           }
-            
-    },[term]);
+
+           setTimeout(() => {
+            if (term) {
+                search();    
+               }
+           }, 500);
+            },[term]);
 
     const renderResults = results.map((results) => {
         return (
