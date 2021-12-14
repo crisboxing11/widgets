@@ -3,7 +3,10 @@ import React from 'react'
 const Dropdown = ({options, selected, onSelectedChange}) => {
 const renderedOptions = options.map((options) => {
     return (
-        <div key={options.value} className="item">
+        <div key={options.value} 
+      onClick={() => onSelectedChange(options) }
+        className="item"
+        >
             {options.label}
         </div>
     )
@@ -15,7 +18,7 @@ const renderedOptions = options.map((options) => {
           <label className="label">Select a Color</label>
           <div className="ui selection dropdown visible active">
             <i className="dropdown icon"></i>
-            <div className="text">Select A Color</div>
+            <div className="text">{selected.label}</div>
             <div className="menu visible transition">
                 {renderedOptions}
             </div>
