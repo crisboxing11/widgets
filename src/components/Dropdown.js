@@ -1,6 +1,9 @@
 import React from 'react'
 
 const Dropdown = ({options, selected, onSelectedChange}) => {
+
+  const [toggle, setToggle] = useState(false);
+
 const renderedOptions = options.map((options) => {
   if (options.value === selected.value ) {
     return null;
