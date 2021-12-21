@@ -27,7 +27,7 @@ const renderedOptions = options.map((options) => {
         </div>
     )
 })
-console.log(ref.current)
+
     return (
       <div ref={ref} className="ui form">
         <div className="field">
