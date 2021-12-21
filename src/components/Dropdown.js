@@ -7,7 +7,10 @@ const Dropdown = ({options, selected, onSelectedChange}) => {
 
   useEffect(() => {
     document.body.addEventListener('click', (event) => {
-     console.log(event.target)
+    if(ref.current.contains(event.target)) {
+      return;
+    }
+    setOpen(false)
     })
   },[])
 
@@ -24,7 +27,7 @@ const renderedOptions = options.map((options) => {
         </div>
     )
 })
-
+console.log(ref.current)
     return (
       <div ref={ref} className="ui form">
         <div className="field">
