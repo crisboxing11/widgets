@@ -16,16 +16,16 @@ content:'You use React by creating components'}
 
 const options = [
     {
-        label: 'The Color Red',
-        value: 'red'
+        label: 'Afrikaans',
+        value: 'af'
     },
     {
-        label: "The Color Green",
-        value: 'green'
+        label: "Arabic",
+        value: 'ar'
     },
     {
-        label: "A Shade of Blue",
-        value: 'blue'
+        label: "Hindi",
+        value: 'hi'
     }
 ];
 export default () => {
