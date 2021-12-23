@@ -33,8 +33,8 @@ export default () => {
     const [showDropdown, setShowDropdown] = useState(true)
     return (
         <div>
-            <button onClick={() => setShowDropdown(!showDropdown) }></button>
-         { showDropdown ? 
+            <button onClick={() => setShowDropdown(!showDropdown)}>TOGGLE DROPDOWN</button>
+         {showDropdown ? 
           <Dropdown 
             selected={selected} 
             onSelectedChange={setSelected}
