@@ -38,7 +38,7 @@ const renderedOptions = options.map((options) => {
     return (
       <div ref={ref} className="ui form">
         <div className="field">
-          <label className="label">Select a Color</label>
+          <label className="label">Select a Language</label>
           <div onClick={() => setOpen(!open)} className={`ui selection dropdown ${open ? 'visible active' : ''} `}>
             <i className="dropdown icon"></i>
             <div className="text">{selected.label}</div>
