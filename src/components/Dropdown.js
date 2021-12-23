@@ -5,18 +5,21 @@ const Dropdown = ({options, selected, onSelectedChange}) => {
   const [open, setOpen] = useState(false);
   const ref = useRef();
 
-  useEffect(() => {
-    const onBodyClick = (event) => {
-      if (ref.current.contains(event.target)) {
-        return;
-      }
-      setOpen(false);
-    };
-    document.body.addEventListener('click', onBodyClick );
-    return () => {
-      
-    }
-  },[])
+   useEffect(() => {
+     const onBodyClick = (event) => {
+       if (ref.current.contains(event.target)) {
+         return;
+       }
+       setOpen(false);
+     };
+     document.body.addEventListener("click", onBodyClick, { capture: true });
+
+     return () => {
+       document.body.removeEventListener("click", onBodyClick, {
+         capture: true,
+       });
+     };
+   }, []);
 
 const renderedOptions = options.map((options) => {
   if (options.value === selected.value ) {
