@@ -33,6 +33,7 @@ export default () => {
     const [showDropdown, setShowDropdown] = useState(true)
     return (
         <div>
+            <button onClick={() => setShowDropdown(!showDropdown) }></button>
             <Dropdown 
             selected={selected} 
             onSelectedChange={setSelected}
