@@ -1,7 +1,8 @@
-import React,{useState,useEffect} from 'react'
-import Accordion from './components/Accordion'
-import Search from './components/Search'
-import Dropdown from './components/Dropdown'
+import React,{useState,useEffect} from 'react';
+import Accordion from './components/Accordion';
+import Search from './components/Search';
+import Dropdown from './components/Dropdown';
+import Translate from './components/Translate';
 
 const items = [
     {title:'What is React?',
