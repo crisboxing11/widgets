@@ -17,8 +17,9 @@ const Convert = ({text,language}) => {
                 },
               }
             );
+            setTranslated(data.data.translations[0].translatedText)
         }
-        
+        doTranslation()
     },[text,language])
 
     return (
