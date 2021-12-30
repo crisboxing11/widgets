@@ -1,10 +1,11 @@
-import React , { useState, useEffect, useRef }from 'react';
+import React , { useState, useEffect }from 'react';
 import Translate from './Translate'
 
 const Convert = ({text,language}) => {
     useEffect(() => {
 console.log("new language or text")
     },[text,language])
+
     return (
         <div>
             
@@ -12,7 +13,7 @@ console.log("new language or text")
     )
 }
 
-export default 'Convert'
+export default Convert
 
 
 
