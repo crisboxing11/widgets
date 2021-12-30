@@ -1,9 +1,9 @@
 import React , { useState, useEffect }from 'react';
-import Translate from './Translate'
+import axios from 'axios'
 
 const Convert = ({text,language}) => {
     useEffect(() => {
-console.log("new language or text")
+        axios.post('https://translation.googleapis.com/language/translate/v2')
     },[text,language])
 
     return (
