@@ -3,6 +3,7 @@ import axios from 'axios'
 import Translate from './Translate';
 
 const Convert = ({text,language}) => {
+    const [translated,setTranslated]= useState('')
     useEffect(() => {
         axios.post("https://translation.googleapis.com/language/translate/v2",
           {},
