@@ -43,6 +43,6 @@ const Convert = ({text,language}) => {
 
 export default Convert
 
-//hello
+
 
 
