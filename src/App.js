@@ -41,7 +41,6 @@ export default () => {
     return (
         <div>
             {showAccordion()}
-        <Translate />
         </div>
     )
 }
