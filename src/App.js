@@ -29,11 +29,18 @@ const options = [
         value: 'hi'
     }
 ];
+
+const showAccordion = () => {
+    if (window.location.pathname === '/') {
+        return <Accordion items={items} />
+    }
+}
 export default () => {
    
     
     return (
         <div>
+            {showAccordion()}
         <Translate />
         </div>
     )
