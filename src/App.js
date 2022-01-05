@@ -42,6 +42,12 @@ const showList = () => {
     }
 };
 
+const showDropdown = () => {
+    if (window.location.pathname === '/dropdown') {
+        return <Dropdown />
+    }
+}
+
 export default () => {
    
     
@@ -49,6 +55,7 @@ export default () => {
         <div>
             {showAccordion()}
             {showList()}
+            {showDropdown()}
         </div>
     )
 }
