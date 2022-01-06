@@ -65,5 +65,3 @@ export default () => {
         </div>
     )
 }
-
-// Need To add navigation feature to bring it all together and display
