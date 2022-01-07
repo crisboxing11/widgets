@@ -6,7 +6,7 @@ import Translate from './components/Translate';
 import Route from './components/Route'
 
 const items = [
-    {title:'What is React?',
+{title:'What is React?',
     content:'React is a front end javascript library'
 },
 {title:'Why use React?',
@@ -29,6 +29,21 @@ const options = [
         label: "Hindi",
         value: 'hi'
     }
+];
+
+const color = [
+  {
+    label: "The Color Red",
+    value: "red",
+  },
+  {
+    label: "The Color Green",
+    value: "green",
+  },
+  {
+    label: "The Color Blue",
+    value: "blue",
+  },
 ];
 
 const showAccordion = () => {
@@ -55,7 +70,7 @@ const showTranslate = () => {
     }
 }
 export default () => {
-   const [selected,setSelected] = useState(options[0])
+   const [selected,setSelected] = useState(color[0])
     
     return (
       <div>
@@ -67,15 +82,13 @@ export default () => {
         </Route>
         <Route path="/dropdown">
           <Dropdown label = "Select a color"
-          options={options} 
+          options={color} 
           selected={selected} 
           onSelectedChange={setSelected}
           />
           
         </Route>
-        <Route path="/">
-          <Accordion items={items} options ={options} selected={selected} OnSelectChange={onSelectChange} />
-        </Route>
+     
       </div>
     );
 }
