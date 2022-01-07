@@ -3,6 +3,7 @@ import Accordion from './components/Accordion';
 import Search from './components/Search';
 import Dropdown from './components/Dropdown';
 import Translate from './components/Translate';
+import Route from './components/Route'
 
 const items = [
     {title:'What is React?',
@@ -57,11 +58,19 @@ export default () => {
    
     
     return (
-        <div>
-            {showAccordion()}
-            {showList()}
-            {showDropdown()}
-            {showTranslate()}
-        </div>
-    )
+      <div>
+        <Route path="/">
+          <Accordion items={items} />
+        </Route>
+        <Route path="/list">
+          <Search />
+        </Route>
+        <Route path="/">
+          <Accordion items={items} />
+        </Route>
+        <Route path="/">
+          <Accordion items={items} />
+        </Route>
+      </div>
+    );
 }
