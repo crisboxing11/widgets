@@ -29,11 +29,7 @@ const options = [
         value: 'hi'
     }
 ];
-const showComponent = (route, component) => {
-    return window.location.pathname === route 
-    ? component 
-    : null
-}
+
 const showAccordion = () => {
     if (window.location.pathname === '/') {
         return <Accordion items={items} />
