@@ -1,20 +1,32 @@
-import React, {useState,useEffect, useRef} from 'react';
+import React, {useState} from 'react';
 import Dropdown from './Dropdown';
 import Convert from './Convert'
 
 const options = [
   {
-    label: "Afrikaans",
-    value: "af",
+    label: "Spanish",
+    value: "es",
   },
   {
-    label: "Arabic",
-    value: "ar",
+    label: "Russian",
+    value: "ru",
   },
   {
-    label: "Hindi",
-    value: "hi",
+    label: "French",
+    value: "fr",
   },
+  {
+    label: "German",
+    value: "de"
+  },
+  {
+    label: "Italian",
+    value: "it"
+  },
+  {
+    label: "Ukranian",
+    value: "uk"
+  }
 ];
 
 const Translate = () => {
