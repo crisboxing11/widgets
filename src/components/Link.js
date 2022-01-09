@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Link = ()  => {
+const Link = ({ className, href, children })  => {
     return (
         <div>
-            <a>Link</a>
+            <a className={className} href={href}>{children}</a>
         </div>
     )
 }
